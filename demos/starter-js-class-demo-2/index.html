@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+
+<!-- Meta data / set up -->
+<head>
+    <!-- CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- add title -->
+    <title>JS Demo 2</title>
+</head>
+
+<!-- structure webpage -->
+<body>
+
+<h1>JS Demo 2</h1>
+
+<div>
+    <div class="gen">
+        <!-- Form -->
+        <p>Choose your favorite vis</p>
+        <form id="frm-faveVis">
+            <input type="radio" name="fave_vis" value="Bar Chart"/> Bar Chart 
+            <br>
+            <input type="radio" name="fave_vis" value="Line Chart"/> Line Chart
+        </form>
+        <button type="button" id="subButton">Submit</button>
+    </div>
+
+    <div class="gen" id="selected-vis">
+        Filler Text
+    </div>
+</div>
+
+<div>
+    <svg id="frame">
+        <!-- <circle cx="0" cy="0" r="10"/>
+        <circle cx="500" cy="500" r="10"/> -->
+
+        <circle cx="100" cy="100" r="10"/>
+        <text x="100" y="100">(100, 100)</text>
+
+        <circle id="max" cx="400" cy="400" r="10"/>
+        <text x="400" y="400">(400, 400)</text>
+    </svg>
+    <button type="button" id="subButton2">Turn Max Orange</button>
+</div>
+
+
+<!-- js file for functionality -->
+<script src="main.js"></script>
+        
+</body>
+
+</html>

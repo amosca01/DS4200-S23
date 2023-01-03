@@ -1,0 +1,33 @@
+body {
+    font-family: Arial; 
+}
+
+button {
+    margin: 10px;
+}
+
+.gen {
+    font-size: 30px;
+    margin: 10px;
+}
+
+#frame {
+    width: 500px;
+    height:  500px;
+}
+
+circle {
+    fill: limegreen;
+}
+
+circle:hover {
+    fill:  purple;
+}
+
+.orange {
+    fill:  orange; 
+}
+
+rect {
+    fill:  lightblue;
+}

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DS4200</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="myPage">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>DS4200 S23</a>
+  <a href="#office-hours" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Office Hours</a>
+  <a href="#schedule" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Schedule</a>
+  <a href="#overview" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Overview</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Slides<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <!-- <a href="slides/01-intro-git.pdf" target="_blank" class="w3-bar-item w3-button">01: Intro and Git</a>
+      <a href="slides/02-design-pipe.pdf" target="_blank" class="w3-bar-item w3-button">02: Design Pipeline</a>
+      <a href="slides/03-data-html-css.pdf" target="_blank" class="w3-bar-item w3-button">03: Data Abstraction, HTML & CSS</a>
+      <a href="slides/04-tasks-interviews.pdf" target="_blank" class="w3-bar-item w3-button">04: Task Abstraction, Interviews</a>
+      <a href="slides/05-marks-channels.pdf" target="_blank" class="w3-bar-item w3-button">05: Marks and Channels</a>
+      <a href="slides/06-perception-color-js.pdf" target="_blank" class="w3-bar-item w3-button">06: Perception - Color, JS</a>
+      <a href="slides/07-perception-gestalt-js.pdf" target="_blank" class="w3-bar-item w3-button">07: Perception - Gestalt, JS</a>
+      <a href="slides/08-visual-encodings.pdf" target="_blank" class="w3-bar-item w3-button">08: Visual Encodings</a>
+      <a href="slides/09-interaction-faceting.pdf" target="_blank" class="w3-bar-item w3-button">09: Interaction and Faceting</a>
+      <a href="slides/12-filtering-aggregation-focus-context.pdf" target="_blank" class="w3-bar-item w3-button">12: Filtering & Aggregation, Focus+Context</a>
+      <a href="slides/13-validation-evaluation.pdf" target="_blank" class="w3-bar-item w3-button">13: Validation and Evaluation</a>
+      <a href="slides/14-evaluation-analysis.pdf" target="_blank" class="w3-bar-item w3-button">14: Validation and Evaluation Pt. 2</a>
+      <a href="slides/15-vis-comm.pdf" target="_blank" class="w3-bar-item w3-button">15: Visualization for Communication</a> -->
+    </div>
+  </div>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Homework<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <!-- <a href="assignments/homework/hw-00.pdf" target="_blank" class="w3-bar-item w3-button">hw-00</a>
+      <a href="assignments/homework/hw-01.pdf" target="_blank" class="w3-bar-item w3-button">hw-01</a>
+      <a href="assignments/homework/hw-01-data.csv" target="_blank" class="w3-bar-item w3-button">hw-01-data</a>
+      <a href="assignments/homework/hw-02.pdf" target="_blank" class="w3-bar-item w3-button">hw-02</a>
+      <a href="assignments/homework/hw-03.pdf" target="_blank" class="w3-bar-item w3-button">hw-03</a>
+      <a href="assignments/homework/hw-04.pdf" target="_blank" class="w3-bar-item w3-button">hw-04</a>
+      <a href="assignments/homework/hw-05.pdf" target="_blank" class="w3-bar-item w3-button">hw-05</a>
+      <a href="assignments/homework/hw-06.pdf" target="_blank" class="w3-bar-item w3-button">hw-06</a> -->
+    </div>
+  </div>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Project<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="assignments/project/overview.pdf" target="_blank" class="w3-bar-item w3-button">Overview</a>
+      <!-- <a href="assignments/project/pm-01.pdf" target="_blank" class="w3-bar-item w3-button">pm-01</a>
+      <a href="assignments/project/pm-02.pdf" target="_blank" class="w3-bar-item w3-button">pm-02</a>
+      <a href="assignments/project/pm-03.pdf" target="_blank" class="w3-bar-item w3-button">pm-03</a>
+      <a href="assignments/project/pm-04.pdf" target="_blank" class="w3-bar-item w3-button">pm-04</a>
+      <a href="assignments/project/pm-05.pdf" target="_blank" class="w3-bar-item w3-button">pm-05</a>
+      <a href="assignments/project/pm-06.pdf" target="_blank" class="w3-bar-item w3-button">pm-06</a> -->
+    </div>
+  </div>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Activities<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <!-- <a href="assignments/inclass/ic-01.pdf" target="_blank" class="w3-bar-item w3-button">ic-01</a>
+      <a href="assignments/inclass/ic-02.pdf" target="_blank" class="w3-bar-item w3-button">ic-02</a>
+      <a href="assignments/inclass/ic-03.pdf" target="_blank" class="w3-bar-item w3-button">ic-03</a>
+      <a href="assignments/inclass/ic-04.pdf" target="_blank" class="w3-bar-item w3-button">ic-04</a>
+      <a href="assignments/inclass/ic-05.pdf" target="_blank" class="w3-bar-item w3-button">ic-05</a>
+      <a href="assignments/inclass/ic-06.pdf" target="_blank" class="w3-bar-item w3-button">ic-06</a>
+      <a href="assignments/inclass/ic-07.pdf" target="_blank" class="w3-bar-item w3-button">ic-07</a>
+      <a href="assignments/inclass/ic-08.pdf" target="_blank" class="w3-bar-item w3-button">ic-08</a>
+      <a href="assignments/inclass/ic-09.pdf" target="_blank" class="w3-bar-item w3-button">ic-09</a>
+      <a href="assignments/inclass/ic-10.pdf" target="_blank" class="w3-bar-item w3-button">ic-10</a>
+      <a href="assignments/inclass/ic-11.pdf" target="_blank" class="w3-bar-item w3-button">ic-11</a>
+      <a href="assignments/inclass/ic-12.pdf" target="_blank" class="w3-bar-item w3-button">ic-12</a>
+      <a href="assignments/inclass/ic-13.pdf" target="_blank" class="w3-bar-item w3-button">ic-13</a> -->
+    </div>
+  </div>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Links<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="https://classroom.github.com/classrooms/121883191-ds4200-s23-classroom" target="_blank" class="w3-bar-item w3-button">GitHub Classroom</a>
+      <a href="https://drive.google.com/drive/folders/13PHgNzPzXmozXncFVdl5hpri-kOaq7PD?usp=sharing" target="_blank" class="w3-bar-item w3-button">GoogleDrive</a>
+      <a href="https://www.gradescope.com/courses/480889" target="_blank" class="w3-bar-item w3-button">Gradescope</a>
+      <a href="https://piazza.com/class/lcge9ggpbdf7eu/" target="_blank" class="w3-bar-item w3-button">Piazza</a>
+      <a href="https://northeastern.instructure.com/courses/133220" target="_blank" class="w3-bar-item w3-button">Canvas</a>
+      <a href="misc_materials/reading_chapters.pdf" target="_blank" class="w3-bar-item w3-button">Textbook Reading</a>
+    </div>
+  </div>
+ </div>
+</div>
+
+<!-- Office Hours Container -->
+<div class="w3-container w3-padding-64 w3-center" id="office-hours">
+<h2 class="w3-left-align">Instructors and Office Hours</h2>
+
+<div class="w3-row">
+
+<div class="w3-half">
+  <img src="img/ab.png" alt="Boss" style="width:45%" class="w3-circle">
+  <h4>Dr. Ab Mosca <span class="w3-opacity">(they/them)</span></h4>
+</div>
+
+<div class="w3-third w3-left-align">
+  <h4>Contact</h4>
+  <p>a.mosca@northeastern.edu</p>
+  <p>Please email for private matters, and use the course <a href="https://piazza.com/class/l6o0hqf4nhx59y" target="_blank">Piazza</a> for content questions</p>
+  <h4>Office Hours</h4>
+  <p>By appointment through <a href="https://calendly.com/aemosca/officehours" target="_blank">Calendly</a> (Note: you must book at least 1 hour in advance)</p>
+</div>
+
+</div>
+
+<div class="w3-row">
+<h3>Teaching Assistants</h3>
+
+  <div class="w3-quarter">
+    <img src="img/vedanshi.jpg" alt="Boss" style="width:45%" class="w3-circle">
+    <h4>Vedanshi Shah <span class="w3-opacity">(she/her)</span></h4>
+  </div>
+
+  <div class="w3-quarter">
+    <img src="img/monroe.png" alt="Boss" style="width:45%" class="w3-circle">
+    <h4>Monroe Chung <span class="w3-opacity">(any pronouns)</span></h4>
+  </div>
+
+  <div class="w3-quarter">
+    <img src="img/vedanshi.jpg" alt="Boss" style="width:45%" class="w3-circle">
+    <h4>Vedanshi Shah <span class="w3-opacity">(she/her)</span></h4>
+  </div>
+
+  <div class="w3-quarter">
+    <img src="img/monroe.png" alt="Boss" style="width:45%" class="w3-circle">
+    <h4>Monroe Chung <span class="w3-opacity">(any pronouns)</span></h4>
+  </div>
+
+</div>
+
+<div class="w3-row">
+
+<div class="w3-container">
+<h4>Office Hours (TBD)</h4>
+
+<div class="w3-content" style="width:90%">
+  <table class="w3-table w3-bordered w3-border">
+    <thead class="w3-gray">
+      <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
+    </thead>
+
+    <tr>
+      <td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td><td width="20%"></td>
+      
+    </tr>
+  </table>
+  <h5 class="w3-left-align"><a href="https://northeastern.zoom.us/j/96573185904?pwd=YTlQQk1DQlJocDZHSDdoVWNKMUtMUT09" target="_blank">Zoom Link</a> Passcode: piechart22</h5>
+  <br>
+</div>
+</div>
+
+<div class="w3-row">
+<h3>Additional Help</h3>
+
+<div class="w3-content w3-left-align" style="width:90%">
+  <h4>Kate Kryder</h4>
+  <p> Kate works with the Northeastern Library, and is able to provide virtual consults on visualization. She works from the West Coast, so has a lot of availability later in the day local time.</p>
+  <p>You can book an appointment with her <a href="https://subjectguides.lib.neu.edu/dataviz/consults" target="_blank">here</a>.  
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+<!-- Schedule Container-->
+<div class="w3-container w3-padding-24 w3-center" id="schedule">
+<h2 class="w3-left-align">Course Schedule</h2>
+<p class="w3-left-align">(subject to change as needed)</p>
+<p class="w3-left-align"><b>Note:</b> 
+  <ul class="w3-left-align">
+    <li>ic assignments are due at the end of class the day they are listed (but will be accepted without penalty until 11:59 PM ET that day)</li>
+    <li>hw and pm assignments are due by 2 PM ET the day they are listed</li>
+  </ul>
+</p>
+
+<div class="w3-content" style="width:90%">
+<table class="w3-table w3-striped w3-bordered w3-border">
+  <thead class="w3-teal">
+    <th>Day</th><th>Date</th><th>Topic</th><th>Assignment DUE 2 PM ET</th><th>Assignment OUT</th>
+  </thead>
+
+  <tr>
+    <td>M</td><td>01/09/23</td>
+    <td>
+      <!-- <a href="slides/01-intro-git.pdf" target="_blank">01-Introduction and Overview</a> -->
+      01-Introduction and Overview
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-01.pdf" target="_blank">ic-01 Github</a></span> -->
+      <span class="w3-text-red">ic-01 Github</span>
+    </td>
+    <td>
+    </td>
+    <td>
+      <a href="assignments/homework/hw-00.pdf" target="_blank">hw-00</a> (Getting started)
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>01/11/23</td>
+    <td>
+      <!-- <a href="slides/02-design-pipe.pdf" target="_blank">02-Visualization Design Pipeline</a> -->
+      Design Pipeline
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-01.pdf" target="_blank">ic-01 Github</a></span> -->
+      <span class="w3-text-red">ic-01 Github</span>
+    </td>
+    <td>
+      hw-00 (Set up & survey)
+    </td>
+    <td>
+      hw-01 (Exploring data)
+      <!-- <a href="assignments/homework/hw-01.pdf" target="_blank">hw-01</a> (Exploring data)
+      <br>
+      <a href="assignments/homework/hw-01-data.csv" target="_blank">hw-01-data</a> -->
+    </td>
+  </tr>
+  <tr class="w3-pale-green">
+    <td>M</td><td>01/16/23</td>
+    <td style="font-style:italic">
+      No Class - University Holiday
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>01/18/23</td>
+    <td>
+      <!-- <a href="slides/03-data-html-css.pdf" target="_blank">03-Data Abstraction, HTML & CSS</a> -->
+      03-Data Abstraction, HTML & CSS
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-02.pdf" target="_blank">ic-02 HTML & CSS</a></span> -->
+      <span class="w3-text-red">ic-02 HTML & CSS</span>
+    </td>
+    <td>
+      hw-01 (Exploring data)
+    </td>
+    <td>
+      hw-02 (Static webpage)
+      <!-- <a href="assignments/homework/hw-02.pdf" target="_blank">hw-02</a> (Static webpage) -->
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>01/23/23</td>
+    <td>
+      <!-- <a href="slides/04-tasks-interviews.pdf" target="_blank">04-Task Abstraction, Interviews</a> -->
+      04-Task Abstraction, Interviews
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-03.pdf" target="_blank">ic-03 Mock Interview</a></span> -->
+      <span class="w3-text-red">ic-03 Mock Interview</span>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>01/25/23</td>
+    <td>
+      <!-- <a href="slides/05-marks-channels.pdf" target="_blank">05-Marks and Channels</a> -->
+      05-Marks and Channels
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-04.pdf" target="_blank">ic-04 Decomposing Graphics</a></span> -->
+      <span class="w3-text-red">ic-04 Decomposing Graphics</span>
+    </td>
+    <td>
+      hw-02 (Static webpage)
+    </td>
+    <td>
+      <!-- <a href="assignments/homework/hw-03.pdf" target="_blank">hw-03</a> (Interactive webpage) -->
+      hw-03 (Interactive webpage)
+      <br>
+      <!-- <a href="assignments/project/pm-01.pdf" target="_blank">pm-01</a> (Project proposal) -->
+      pm-01 (Project proposal)
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>01/30/23</td>
+    <td>
+      <!-- <a href="slides/06-perception-color-js.pdf" target="_blank">06-Perception - Color, JS</a> -->
+      06-Perception - Color, JS
+      <br>
+      <!-- <a href="demos/reference-js-class-demo-1.zip" target="_blank">js-class-demo-1</a><br><span class="w3-text-red"><a href="assignments/inclass/ic-05.pdf" target="_blank">ic-05 JavaScript Pt1</a></span> -->
+      js-class-demo-1
+      <br>
+      <span class="w3-text-red">ic-05 JavaScript Pt1</span>
+    </td>
+    <td>
+    </td>
+    <td> 
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>02/01/23</td>
+    <td>
+      <span class="w3-text-blue">Project Pitches & Group Formation</span>
+      <br>
+      <!-- <a href="https://forms.gle/5irSYP3DS587sN1E8" target="_blank">Project Group/Topic Decisions</a> -->
+      Project Group/Topic Decisions
+    </td>
+    <td>
+      pm-01 (Project proposal)
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>02/06/23</td>
+    <td>
+      <span class="w3-text-blue">Project Pitches & Group Formation</span>
+      <br>
+      <!-- <a href="https://forms.gle/5irSYP3DS587sN1E8" target="_blank">Project Group/Topic Decisions</a> -->
+      Group/Topic Decisions
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>02/08/23</td>
+    <td>
+      <!-- <a href="slides/07-perception-gestalt-js.pdf" target="_blank">07-Perception - Gestalt, JS</a> -->
+      07-Perception - Gestalt, JS
+      <br>
+      <!-- <a href="demos/reference-js-class-demo-2.zip" target="_blank">js-class-demo-2</a> -->
+      js-class-demo-2
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-06.pdf" target="_blank">ic-06 JavaScript Pt1</a></span> -->
+      <span class="w3-text-red">ic-06 JavaScript Pt1</span>
+    </td>
+    <td>
+      hw-03 (Interactive webpage)
+    </td>
+    <td>
+      hw-04 (Event handling)
+      <!-- <a href="assignments/homework/hw-04.pdf" target="_blank">hw-04</a> (Event handling) -->
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>02/13/23</td>
+    <td>
+      08-Intro to D3
+      <br>
+      <!-- <a href="demos/starter-d3-class-demo-1.zip" target="_blank">starter-D3-demo-1</a> -->
+      starter-D3-demo-1
+      <br>
+      <!-- <a href="demos/reference-d3-class-demo-1.zip" target="_blank">final-D3-demo-1</a> -->
+      <!-- <br> -->
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-07.pdf" target="_blank">ic-07 D3 Pt1</a></span> -->
+      <span class="w3-text-red">ic-07 D3 Pt1</span>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>02/15/23</td>
+    <td>
+      09-Intro to D3
+      <br>
+      <!-- <a href="demos/starter-d3-class-demo-2.zip" target="_blank">starter-D3-demo-2</a> -->
+      starter-D3-demo-2
+      <br>
+      <!-- <a href="demos/reference-d3-class-demo-2.zip" target="_blank">final-D3-demo-2</a> -->
+      <!-- <br> -->
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-08.pdf" target="_blank">ic-08 D3 Pt2</a></span> -->
+      <span class="w3-text-red">ic-08 D3 Pt2</span>
+    </td>
+    <td>
+      hw-04 (Event handling)
+    </td>
+    <td>
+      hw-05 (Binding data)
+      <!-- <a href="assignments/homework/hw-05.pdf" target="_blank">hw-05</a> (Binding data) -->
+    </td>
+  </tr>
+  <tr class="w3-pale-green">
+    <td>M</td><td>02/20/23</td>
+    <td style="font-style:italic">
+      No Class - University Holiday
+    </td>
+    <td> 
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>02/22/23</td>
+    <td>
+      <!-- <a href="slides/10-visual-encodings.pdf" target="_blank">10-Visual Encodings</a> -->
+      10-Visual Encodings
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-09.pdf" target="_blank">ic-09 Sketching</a></span> -->
+      <span class="w3-text-red">ic-09 Sketching</span>
+    </td>
+    <td> 
+      hw-05 (Binding data)
+    </td>
+    <td>
+      pm-02 (Design phase)
+      <!-- <a href="assignments/project/pm-02.pdf" target="_blank">pm-02 (Design phase)</a> -->
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>02/27/23</td>
+    <td>
+      <!-- <a href="slides/11-interaction-faceting.pdf" target="_blank">11-Interaction and Faceting</a> -->
+      11-Interaction and Faceting
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-10.pdf" target="_blank">ic-10 Visualizations "In the Wild"</a></span> -->
+      <span class="w3-text-red">ic-10 Visualizations "In the Wild"</span>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>03/01/23</td>
+    <td>
+      <span class="w3-text-grey">Flex day; Topic TBD</span>
+    </td>
+    <td>
+      pm-02 (Design phase)
+    </td>
+    <td>
+      hw-06 (Brushing & linking)
+      <!-- <a href="assignments/homework/hw-06.pdf" target="_blank">hw-06 </a>(Brushing & linking) -->
+    </td>
+  </tr>
+  <tr class="w3-pale-green">
+    <td>M</td><td>03/06/23</td>
+    <td style="font-style:italic">
+      No Class - Spring Break
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr class="w3-pale-green">
+    <td>W</td><td>03/08/23</td>
+    <td style="font-style:italic">
+      No Class - Spring Break
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>03/13/23</td>
+    <td>
+      <span class="w3-text-blue">Final Sketch Feedback & Work Session</span>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>03/15/23</td>
+    <td>
+      <span class="w3-text-blue">Final Sketch Feedback & Work Session</span>
+    </td>
+    <td>
+      hw-06 (Brushing & linking)
+    </td>
+    <td>
+      pm-03 (Implementation Pt. 1)
+      <!-- <a href="assignments/project/pm-03.pdf" target="_blank">pm-03 (Implementation Pt.1)</a> -->
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>03/20/23</td>
+    <td>
+      <!-- <a href="slides/12-filtering-aggregation-focus-context.pdf" target="_blank">12-Filtering & Aggregation, Focus+Context</a> -->
+      12-Filtering & Aggregation, Focus+Context
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-12.pdf" target="_blank">ic-12 Dealing with Big Data</a></span> -->
+      <span class="w3-text-red">ic-12 Dealing with Big Data</span>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>03/22/23</td>
+    <td>
+      <!-- <a href="slides/13-validation-evaluation.pdf" target="_blank">13-Validation and Evaluation</a> -->
+      13-Validation and Evaluation
+      <br>
+      <!-- <span class="w3-text-red"><a href="assignments/inclass/ic-14.pdf" target="_blank">ic-14 Usability Testing</a></span> -->
+      <span class="w3-text-red">ic-14 Usability Testing</span>
+    </td>
+    <td>
+      pm-03 (Implementation Pt.1)
+    </td>
+    <td>
+      pm-04 (Implementation Pt. 2)
+      <!-- <a href="assignments/project/pm-04.pdf" target="_blank">pm-04 (Implementation Pt.2)</a> -->
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>03/27/23</td>
+    <td>
+      <!-- <a href="slides/14-evaluation-analysis.pdf" target="_blank">14-Validation and Evaluation cont.</a> -->
+      14-Validation and Evaluation cont.
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>03/29/23</td>
+    <td>
+      <span class="w3-text-blue">Project Usability Testing & Work Session</span>
+    </td>
+    <td>
+      pm-04 (Implementation Pt.2)
+    </td>
+    <td>
+      pm-05 (Final implementation)
+      <!-- <a href="assignments/project/pm-05.pdf" target="_blank">pm-05 (Final implementation)</a> -->
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>04/03/23</td>
+    <td>
+      <span class="w3-text-grey">Flex day; Topic TBD</span>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>04/05/23</td>
+    <td>
+      <!-- <a href="slides/15-vis-comm.pdf" target="_blank">15-Visualization for Communication</a> -->
+      15-Visualization for Communication
+      <br>
+      <span class="w3-text-red">TRACE Evals</span>
+    </td>
+    <td>
+      pm-05 (Final implementation)
+    </td>
+    <td>
+      pm-06 (Finish project)
+      <!-- <a href="assignments/project/pm-06.pdf" target="_blank">pm-06 (Finish project)</a> -->
+    </td>
+  </tr>
+  <tr>
+    <td>M</td><td>04/10/23</td>
+    <td>
+      <span class="w3-text-blue">Project presentations</span>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>04/12/23</td>
+    <td>
+      <span class="w3-text-blue">Project presentations</span>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr class="w3-pale-green">
+    <td>M</td><td>04/17/23</td>
+    <td style="font-style:italic">
+      No Class - University Holiday
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>W</td><td>04/19/23</td>
+    <td>
+      <span class="w3-text-blue">Project presentations and Wrap-up</span>
+    </td>
+    <td>
+      pm-06 (Finish project)
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
+</div>
+
+</div>
+
+<!-- Overview Container -->
+<div class="w3-container w3-padding-24" id="overview">
+<h2>Course Overview and Policies</h2>
+
+<h3>Description</h3>
+<p>This course introduces foundational principles, methods, and techniques of visualization to enable creation of effective information representations suitable for exploration and discovery.</p>
+
+<p>Theoretical skill scovered in this course include the design and evaluation of novel visualizations as well as relevant principles of human vision, perception, and cognition. Students will be expected to communicate their understanding of these principles through writing and sketching.</p>  
+
+<p>Technical skills covered include implementing novel information visualizations using the JavaScript library D3.js. This will require familiarity with GitHub, HTML, and CSS, which will be introduced throughout the course.</p>
+
+<p>After completion of this course students should be able to:
+  <ul>
+    <li>Choose appropriate visualization methods for a given data type and communication goal</li>
+    <li>Design an effective visualization using design annd human perception principles</li>
+    <li>Assess the quality and effectiveness of a visualization</li>
+    <li>Implement static and interactice web-based visualizations</li>
+  </ul>
+</p>
+
+<h3>Prerequisites</h3>
+<p>The prerequisite for this course is CS2510 or DS2500</p> 
+<p>Assignments and projects in this course will require programming with JavaScript and familiarity with GitHub, HTML, and CSS. However, no prior experience with any of these tools is required; tutorials will be provided in class and homework assignments will offer opportunities to develop and practice skills.</p> 
+
+<h3>Textbook</h3> 
+<p>This course uses one free online textbook: <a href="https://www.taylorfrancis.com/books/mono/10.1201/b17511/visualization-analysis-design-tamara-munzner" target="_blank">Visualization Analysis and Design by Tamara Munzner</a></p> 
+<p>If accessing off-campus, use the Northeastern VPN.</p>  
+
+<h3>Supplies</h3>
+<p>We will do a lot of visualization sketching and design iteration in this course. <b>Please bring some method of sketching with you to each class</b>. A tablet that you can draw on works well, as does a notebook with multi-colored pens, pencils, or markers.</p> 
+<p>Most classes will include activities that you will need your laptop to complete. <b>Please be sure to bring a laptop suitable for coding to class</b>. Not all classrooms have good access to outlets, so please try to bring your laptop with enough charge to make it through a full class.</p>
+
+<h3>Course Components</h3>
+<p>This course meets twice a week for 100 minutes through the semester. Typically, you can expect class time to be split between a lecture and in-class activity. The purpose of the lecture is to introduce visualization theory, and the purpose of the in-class activity is to practice skills needed to put that theory into practice.</p> 
+<p>In addition to class time, you should plan to spend approximately 10 hours/week working on this course. Your work outside of class will consist of homework assignments, a final project, and readings.</p> 
+<p>Graded course components are each explained in detail below.</p> 
+
+<h4>In-class Activities</h4>
+<h5 class="w3-text-grey">Denoted ic-# on Course Schedule / Gradescope</h5>
+<p>At the end of most classes we will do an in-class activity that will allow you to practice the skills covered in lecture. You are encouraged to work with other students on in-class activities, however you and everyone you collaborated with will need to make an individual submission on Gradescope.</p>  
+<p>In-class activities are partially graded based on effort, and partially graded based on answers to recap questions about the day's material.</p> 
+
+<h4>Homework Assignments</h4>
+<h5 class="w3-text-grey">Denoted hw-# on Course Schedule / Gradescope</h5>
+<p>There will be regular homework assignments for this course. Each assignment will require you to apply the concepts discussed in readings and in-class lectures to programming assignments and writing assignments.</p>
+<p>Homework assignments will be completed and submitted in pairs. Students who are paired up for an assignment are expected to work on all aspects of the assignment together. After submitting an assignment, students will be asked to fill out a short survey evaluating their and their partner’s contributions to the assignment. The teaching staff reserves the right to adjust homework grades if one partner puts in significantly more effort than another.</p> 
+<p>If you have an extenuating circumstance that prevents you from working with another student on a homework assignment, you must request permission to work alone at least 5 days before the assignment is due. If permission to work alone is not requested at least 5 days in advance, individual homework submissions will receive a -5% point adjustment.</p>     
+<p>Point values for each homework assignment can be found on Gradescope and Canvas. If there is a discrepancy between what is listed on Gradescope versus Canvas, what you see on Gradescope is correct.</p>   
+
+<h4>Project Milestones</h4>
+<h5 class="w3-text-grey">Denoted pm-# on Course Schedule / Gradescope</h5>
+<p>This course will include a substantial group project. You will work with a group to create a novel visualization tool for a domain a nd end user of your choosing.</p>
+<p>To keep you on track, your project is divided into several smaller milestone assignments due thoughout the semester. Some project milestones will be done individually, and others in groups. Your final project score will be a combination of your scores on individual project milestone assignments.</p> 
+<p>Point values for each project milestone can be found on Gradescope and Canvas. If there is a discrepancy between what is listed on Gradescope versus Canvas, what you see on Gradescope is correct.</p>
+<p>More specific details on the project can be found in the Project Overview.</p>  
+
+<h3>Late Policy</h3>
+<p>All assignments (in-class activities, homeworks, and project milestones) are due  as listed on the <a href="#schedule">Course Schedule</a>. We do not accept late assignments, however your lowest ic and hw scores will be dropped from your final grade (which essentially gives you a free late submission for each).</p>
+<p>If you encounter circumstances that make submitting on time difficult or impossible, please schedule an office hour with Ab, or email them to discuss options.</p>
+
+<h3>Grades</h3>
+<p>All assignments will be submitted through the course <a href="https://www.gradescope.com/courses/480889" target="_blank">Gradescope</a>. <b>Once grades are released, you have three days to submit a regrade request through Gradescope.</b> If you notice any discrepancies or mistakes in your grade, you should submit a regrade request. After the three day regrade request period passes, no regrade requests will be accepted.</p>
+
+<h4>Final Grades</h4>
+<p>Final grades will be a weighted average of all assignments, broken down as follows: Homework (40%, lowest assignment dropped), Project (40%), In-class Activities (20%, lowest assignment dropped).</p>
+<p>In your final grade calculation, decimals will be rounded up to the nearest whole number and letter will be assigned according to the table below.</p>
+
+<div class="w3-row">
+  <div class="w3-half"><img src="img/final_grades.png" style="width: 100%; max-width:600px;" class="w3-center"></div>
+  <div class="w3-half"><img src="img/number_grades.png" style="width: 100%; max-width:550px;"></div>      
+</div>
+
+<h3>Classroom Conduct</h3>
+<p>All students and teaching staff are expected to treat each other with fairness, kindness, and consideration. This includes when providing critical feedback. Constructive criticism makes us better visualization designers, cruel and derogatory remarks are unacceptable.</p>
+
+<h3>Academic Integrity</h3>
+<p>While students are encouraged to discuss course materials, no plagiarism/copying is allowed. In particular:
+  <ul>
+    <li>You may not copy anyone else's text, source code, images, videos, visualization designs, or slides under any circumstances. This includes online sources.</li>
+    <li>You may not permit any other student to see any part of your program or writing assignment.</li>
+    <li>You may not permit yourself to see any part of another student's program or writing assignment.</li>
+  </ul></p>
+
+<p>You may consult online resources as part of your coursework, but you may not copy code from online sources. If you get an idea of how to solve a problem from an online source, include a citation in a code block at the top of your script. Ex.:</p>
+
+<div class="w3-example">
+<div class="w3-code jsHigh notranslate">
+/*<br>
+DS4200<br>
+HW2<br>
+MyName<br>
+Consulted D3 library for basic line chart https://www.d3-graph-gallery.com/graph/line_basic.html<br>
+*/
+</div>
+</div>
+<p>You do not need to include a similar notation if you consulted with a classmate; we expect that. Just don't share code.</p>
+<p>Similarly, if you get an idea for a visualization design from an online source, include a short citation either in a code block at the top of your script, or as a note at the top of a sketch or write up.</p> 
+<p>If you have a question about what is considered a violation of this policy, please ask!</p>
+<p>You can find the university's academic integrity policy here: <a href="http://www.northeastern.edu/osccr/academic-integrity" target="_blank">http://www.northeastern.edu/osccr/academic-integrity</a>.</p> 
+
+<h3>Title IX</h3>
+<p>Title IX of the Education Amendments of 1972 protects individuals from sex or gender-based discrimination, including discrimination based on gender-identity, in educational programs and activities that receive federal financial assistance.</p>
+<p>Northeastern’s Title IX Policy prohibits Prohibited Offenses, which are defined as sexual harassment, sexual assault, relationship or domestic violence, and stalking. The Title IX Policy applies to the entire community, including students, faculty and staff of all gender identities.</p>
+<p>If you or someone you know has been a survivor of a Prohibited Offense, confidential support and guidance can be found through the <a href="http://www.northeastern.edu/uhcs/" target="_blank">University Health and Counseling Services</a> staff and the <a href="http://www.northeastern.edu/spirituallife/" target="_blank">Center for Spiritual Dialogue and Service</a> clergy members. By law, those employees are not required to report allegations of sex or gender-based discrimination to the University.</p>
+<p>Alleged violations can be reported non-confidentially to the Title IX Coordinator within The Office for Gender Equity and Compliance at: titleix@northeastern.edu and/or through NUPD (Emergency 617.373.3333; Non-Emergency 617.373.2121). Reporting Prohibited Offenses to NUPD does NOT commit the victim/affected party to future legal action.</p>
+<p>Faculty members are considered “responsible employees” at Northeastern University, meaning they are required to report all allegations of sex or gender-based discrimination to the Title IX Coordinator.</p>
+<p><b>Please visit <a href="www.northeastern.edu/ouec" target="_blank">www.northeastern.edu/ouec</a> for a complete list of reporting options and resources both on- and off-campus.</b></p>
+
+<h3>Students with Disabilities</h3>
+<p>Students with disabilities who wish to receive academic services and/or accommodations should visit the <a href="http://www.northeastern.edu/drc" target="_blank">Disability Resource Center</a> at 20 Dodge Hall or call (617) 373-2675. If you have already done so, please provide your letter from the DRC to Ab early in the semester so they can arrange accommodations.</p>
+
+<h3>A note to all students</h3>
+<p>I (Ab) am here to support you. If at any point in the semester you realize there is something I could do to better support you, please reach out. This can be something as small as letting me know I am not making the font big enough on my presentations, to sharing that you need some help getting caught up after a hard day or week.</p>
+<p>Please be respectful of your classmates and instructor's wellbeing. <b class="w3-text-red">You should not come to class if you are not feeling well.</b> This includes COVID symptoms, and symptoms of non-COVID illnesses. If you need to miss class, I will work with you to stay caught up.</p> 
+
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script src="libs/w3codecolor.js"></script>
+
+<script>
+  w3CodeColor();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html>
+
+<!-- Meta data / set up -->
+<head>
+    <!-- CSS for styling -->
+    <link rel="stylesheet" href="ref-style.css">
+    
+    <!-- add title -->
+    <title>JS Demo 2</title>
+</head>
+
+<!-- structure webpage -->
+<body>
+
+<h1>JS Demo 2</h1>
+
+<div>
+    <div class="gen">
+        <!-- Form -->
+        <p>Choose your favorite Vis</p>
+        <form id="frm-faveVis">
+            <input type="radio" name="fave_vis" value="Bar Chart"/> Bar Chart
+            <br>  
+            <input type="radio" name="fave_vis" value="Line Chart"/> Line Chart 
+        </form>
+        <button type="button" id="subButton">Submit</button>
+    </div>
+
+    <div class="gen" id="selected-vis">
+        Filler text
+    </div>   
+</div>
+
+<div>
+    <!-- SVG -->
+    <!-- Use SVG's to "draw" on the webpage --> 
+    <!-- Use one svg tag as a "frame", and build inside of it -->
+    <svg id="frame">
+
+    <!-- Not using a margin, shapes get cut off -->
+        <!-- <circle cx="0" cy="0" r="10"/>
+        <circle cx="500" cy="500" r="10"/>
+        <rect x="500" y="0" width="20px" height="20px"/>
+        <rect x="0" y="500" width="20px" height="20px"/> -->
+
+    <!-- Using a margin of 100px -->
+    <!-- Notice y values increase DOWN the page -->
+        <circle cx="100" cy="100" r="10"/>
+        <text x="100" y="100">(100,100)</text>
+
+        <circle id="max" cx="400" cy="400" r="10"/>
+        <text x="400" y="400">(400,400)</text>
+
+        <rect x="400" y="100" width="20px" height="20px"/>
+        <text x="400" y="100">(400,100)</text>
+
+        <rect x="100" y="400" width="20px" height="20px"/>
+        <text x="100" y="400">(100,400)</text>
+    </svg>
+
+     <button type="button" id="subButton2">Orange Max</button>
+
+</div>
+
+<!-- js file for functionality -->
+<script src="ref-main.js"></script>
+        
+</body>
+
+</html>
