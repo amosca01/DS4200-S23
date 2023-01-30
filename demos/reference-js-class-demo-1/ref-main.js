@@ -1,7 +1,7 @@
 
 // JS File for class demo 
 // Ab Mosca 
-// Last moditifed: 02.10.2022 
+// Last moditifed: 01.30.2023
 
 
 //########################################################################
@@ -21,10 +21,6 @@ console.log("Hello world");
 //      Types of vaiables are string, number, boolean 
 //########################################################################
 
-// var -- DON'T USE THIS! It's depricated. 
-var varVar = "Don't use var to declare variables!"; 
-console.log(varVar); 
-
 // const -- This is for constant (unchangeable) variables
 const myCourse = "DS4200";
 console.log(myCourse); 
@@ -38,21 +34,22 @@ console.log(season);
 season = "Spring";
 console.log(season); 
 
+// var -- DON'T USE THIS! It's depricated. 
+var varVar = "Don't use var to declare variables!"; 
+console.log(varVar); 
+
 // Variables can be strings like those above, or numbers, or boolean
 console.log(typeof(season)); 
 
 let hwDue = true; 
-console.log(hwDue);
 console.log(typeof(hwDue)); 
 
 let favoriteNumber = 6; 
-console.log(favoriteNumber);
 console.log(typeof(favoriteNumber));
 
 // JavaScript is loosely typed, that means it will not stop you from 
 //  changing variable type with an assignment
 favoriteNumber = "six"; 
-console.log(favoriteNumber);
 console.log(typeof(favoriteNumber));
 
 //########################################################################
@@ -69,13 +66,13 @@ function tentimesFaveNum(faveNum) {
     return tenTimes; 
 }
 
+// Call or invoke a user defined function with its name and parameters
+let tenTimesFave = tentimesFaveNum(6);
+console.log(tenTimesFave); 
+
 // Note that the scope of tenTimes is only within tentimesFaveNum()
 // In other words, this next line will cause an error. 
-//console.log(tenTimes); 
-
-// Call or invoke a user defined function with its name and parameters
-let tenTimesFave = tentimesFaveNum(favoriteNumber);
-console.log(tenTimesFave);  
+//console.log(tenTimes);  
 
 //########################################################################
 // Interactivity with JS
