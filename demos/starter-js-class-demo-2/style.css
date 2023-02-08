@@ -1,0 +1,21 @@
+body {
+    font-family: Arial;
+    font-size: 30px;
+}
+
+#frame {
+    width: 500px;
+    height: 500px;
+}
+
+.gen {
+    margin: 10px;
+}
+
+circle {
+    fill: limegreen;
+}
+
+.orange {
+    fill: orange;
+}
