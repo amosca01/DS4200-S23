@@ -1,7 +1,7 @@
 
 // JS File for class demo part 2
 // Ab Mosca 
-// Last moditifed: 09.26.2022 
+// Last moditifed: 02.07.23 
 
 
 //########################################################################
@@ -17,7 +17,7 @@
 function submitClicked() {
 
     // get information from inputs (this works because
-    // we only one form with inputs, if you had multiple forms
+    // we only have one form with inputs, if you had multiple forms
     // with inputs you'd need to think of a different way to 
     // grab the elements)
     let vals = document.getElementsByTagName("input"); 
@@ -26,7 +26,7 @@ function submitClicked() {
     for (let i = 0; i < vals.length; i++) {
         if(vals[i].checked) {
 
-            //console.log(vals[i].value); 
+            console.log(vals[i].value); 
 
             //update text
             let newText = "Selected Vis: " + vals[i].value; 
@@ -48,6 +48,33 @@ document.getElementById("subButton").addEventListener('click', submitClicked);
 (function logging() {
     console.log("My self-invoking, function");
 })(); 
+
+//########################################################################
+// Anonymous Function  
+//     Functions that are unnamed and not declared 
+//########################################################################
+
+// Note the syntax -- the () at the end automatically invokes the function
+
+// Syntax 1
+(function() {
+    console.log("My anonymous function");
+})();
+
+// Vars can still be passed
+let note = "This is my note"; 
+(function(message) {
+    console.log(message);
+})(note);
+
+// Syntax 2: Arrow notation 
+(() => { console.log("My other anonymous function") })(); 
+
+// You don't need {}, but I recommend using it
+(() => console.log("My other anonymous function w/o {}") )(); 
+
+// Vars can still be passed
+((message) => { console.log(message) })(note);
 
 //########################################################################
 // Dynamic Styling
