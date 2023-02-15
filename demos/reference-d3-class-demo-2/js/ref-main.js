@@ -56,8 +56,8 @@ d3.csv("data/circles1.csv").then((data) => {
 }); // .then is closed here 
 
 // Let's do another example, with a scale 
-const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.left - MARGINS.right;
-const VIS_WIDTH = FRAME_WIDTH - MARGINS.top - MARGINS.bottom; 
+const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
+const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right; 
 
 const FRAME2 = d3.select("#vis2")
                   .append("svg")

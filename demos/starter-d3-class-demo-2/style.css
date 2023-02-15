@@ -1,2 +1,11 @@
+body {
+    font-family: Arial;
+}
 
+.tooltip {
+    position:absolute;
+    background-color: grey;
+    border: solid;
+    padding: 5px;
+}
 
